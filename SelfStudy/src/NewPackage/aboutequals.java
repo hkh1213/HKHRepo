@@ -1,6 +1,6 @@
 package NewPackage;
 
-public class Dis {
+public class aboutequals {
 
 	public static void main(String[] args) {
 		String answer="";
