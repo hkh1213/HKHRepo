@@ -1,7 +1,9 @@
 package Algorithm;
 
 public class Algorithm6 {
+	
 	int search(int[] data, int begin, int end, int target) {
+		
 		
 		if(begin>end) 
 			return -1;
