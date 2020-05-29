@@ -1,6 +1,6 @@
 package Algorithm;
 
-public class Algorithm4 {
+public class Algorithm3 {
 public static void main(String[] args) {
 	System.out.println(cd(12,5));
 }

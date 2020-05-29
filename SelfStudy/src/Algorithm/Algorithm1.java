@@ -1,24 +1,17 @@
-package NewPackage;
+package Algorithm;
 
 import java.util.Scanner;
 
 public class Algorithm1 {
 
 	public static void main(String[] args){
-		Scanner scn=new Scanner(System.in);
-		
-		int k=scn.nextInt();
-		System.out.println(k);
-
-		int result=func(k);
+		int i,j;
+		int result=0;
+		for(i=1,j=10;i<=10;i++,j--) {
+			result=result+i+j;
+			
+		}
 		System.out.println(result);
-	}
-	public static int func(int n){
-		
-		if(n<=0)
-			return 0;
-		else
-			return n+func(n-1);
 		
 	}
 
