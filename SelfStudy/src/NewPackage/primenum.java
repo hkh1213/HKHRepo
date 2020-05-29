@@ -1,25 +1,34 @@
 package NewPackage;
 
-import java.util.Scanner;
-
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+ 
 public class primenum {
+	  public static List<Integer> getDistinctStream(List<Integer> originList) {
+		  
+	        List<Integer> resultList = new ArrayList<Integer>();
+	 
+	        resultList = originList.stream().distinct().collect(Collectors.toList());
+	 
+	        return resultList;
+	    }
+	
 
-	public static void main(String[] args) {
-		Scanner scn=new Scanner(System.in);
-		int n=scn.nextInt();
-		int a;
-		StringBuilder sb=new StringBuilder();
-		for(int i=1;i<n;i++) {
-			for(int j=1;j<n;j++) {
-				if(i%j==0&&j!=1&&i!=j) {
-					sb.append(i);
-					
-				}
-				else{
-			
-				}System.out.println(sb);	
-			}
-		}
-	}
-
-} 
+ 
+    public static void main(String[] args) {
+    	int []arr= {5,5,6,6,1,1,2,2,3,4,5,5};
+    	int[] answer = {};
+        List<Integer> originList = new ArrayList<Integer>();
+        List<Integer> resultList = new ArrayList<Integer>();
+        for(int i=0;i<arr.length;i++) {
+        	originList.add(arr[i]);
+        }
+        
+        resultList = getDistinctStream(originList);
+ 
+        System.out.println(resultList);
+/*        return answer;
+*/  
+        }
+}

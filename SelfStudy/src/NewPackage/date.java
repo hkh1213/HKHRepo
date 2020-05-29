@@ -1,61 +1,34 @@
 package NewPackage;
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.Scanner;
 
 public class date {
 
-	public static void main(String[] args)throws Exception {
-		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd") ;
-	Scanner scn=new Scanner(System.in);
-	int a,b;
-	a=scn.nextInt();
-	b=scn.nextInt();
-
-		String day="";
-		String date="2016";
-		StringBuilder sb=new StringBuilder(date);
-			sb.append("0"+a);
-			sb.append("0"+b);
+	public static void main(String[] args) {
+		Scanner scn=new Scanner(System.in);
+		String s=scn.next();
+		String s1=s.toUpperCase();
+		String[] arr=s1.split("");
+		int count=0;
+		int count2=0;
+		for(int i=0;i<s.length();i++) {
+			if(arr[i].equals("P")) {
+				count++;
+			}
+			if(arr[i].equals("Y")) {
+				count2++;
+			}
+			
+		}
 		
-		String s=sb.toString();
-		date=s;
-		
-	    Date nDate = dateFormat.parse(date) ;	
-	     
-	    Calendar cal = Calendar.getInstance() ;
-	    cal.setTime(nDate);
-	     
-	    int dayNum = cal.get(Calendar.DAY_OF_WEEK) ;
-	    
-	    switch(dayNum){
-        case 1:
-            day = "SUN";
-            break ;
-        case 2:
-            day = "MON";
-            break ;
-        case 3:
-            day = "TUE";
-            break ;
-        case 4:
-            day = "WED";
-            break ;
-        case 5:
-            day = "THR";
-            break ;
-        case 6:
-            day = "FRI";
-            break ;
-        case 7:
-            day = "SAT";
-            break ;
-             
-    }
-     
-     System.out.println(day);
+		boolean isPrime =true;
+		if (count==count2) {
+			
+		}
+		else {
+			isPrime=!isPrime; 
+		}
+		System.out.println(isPrime);
 	}
 	}
 
