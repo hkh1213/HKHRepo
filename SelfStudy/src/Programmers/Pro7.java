@@ -1,39 +1,37 @@
 package Programmers;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class Pro7 {
-
 	public static void main(String[] args) {
-		String s = "tryy   hello  world";
-		
-		String[] sp = s.split(" "); 
-		StringBuilder upper=new StringBuilder();
-		 List<String> strlist=new ArrayList<String>();
-		 for(int i=0;i<sp.length;i++) {
-			 if(sp[i].length()!=0)
-			strlist.add(sp[i]);
-		 }
-		 
-		 String[] strings = strlist.stream().toArray(String[]::new);
-	System.out.println(Arrays.toString(strings));
-		 
-			 for(int i=0;i<strlist.size();i++) {
-			 String[] arr=strlist.get(i).split("");
-			 for(int j=0;j<arr.length;j++) {
-				
-				 if (j == 0 || j % 2 == 0)
-					upper.append(arr[j].toUpperCase());
-					else
-					upper.append(arr[j].toLowerCase());
+		String s=" try   hello world ";
+		String[] arr=s.split("");
+		System.out.println(arr.length);
+		int i=0;
+		int st=1;
+		while(i<arr.length) {
+
+			 if(arr[i].equals(" ")) {
+				st=1;
 			 }
-			 }
-				/*
-				 * for(int i=0;i<strlist.size();i++) strings[i].replaceAll(strings[i],arr1[i]);
-				 * 
-				 * System.out.println(Arrays.toString(strings));
-				 */
+			
+			 else if(arr[i]!=" "&&st%2==1) {
+				arr[i]=arr[i].replace(arr[i], arr[i].toUpperCase());
+				st++;
+		}
+			
+			 else if(arr[i]!=" "&&st%2==0) {
+				arr[i]=arr[i].replace(arr[i], arr[i].toLowerCase());
+				st++;
+		}
+			i++;
+		}
+		StringBuffer sb = new StringBuffer();
+	      for(int j = 0; j < arr.length; j++) {
+	         sb.append(arr[j]);
+	      }
+	      String str = sb.toString();
+	      System.out.println(str);
 	}
+	
 }
