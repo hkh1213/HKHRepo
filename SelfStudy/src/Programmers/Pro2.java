@@ -2,9 +2,6 @@ package Programmers;
 
 public class Pro2 {
 
-	public static void main(String[] args) {
-
-	}
 	public static int findMin(int[] answer,int st,int end) {
 		int min;
 		if(st==end) {
