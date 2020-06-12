@@ -1,4 +1,4 @@
-package StudyJava;
+package BakJoon;
 
 import java.util.Scanner;
 
