@@ -22,9 +22,21 @@ public class Code3 {
 		} catch (FileNotFoundException e) {
 			System.out.println("warning");
 		}
-	
+	bubbleSort();
 	for(int i=0;i<n;i++) {
 		System.out.println(members[i].name+""+members[i].number);
 	}
+	}
+	private static void bubbleSort() {
+		for(int i=n-1;i>0;i--) {
+			for(int j=0;j<i;j++) {
+				if(members[j].name.compareTo(members[j+1].name)>0) {//compare names of j=th and j+1-th person
+					//swap two person
+					Person01 tmp=members[j];
+					members[j]=members[j+1];
+					members[j+1]=tmp;
+			}
+			}
+		}
 	}
 }

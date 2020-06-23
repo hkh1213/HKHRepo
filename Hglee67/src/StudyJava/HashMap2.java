@@ -14,13 +14,10 @@ public class HashMap2 {
 		List<HashMap<String,String>> hmap =new ArrayList<>();
 		
 		HashMap<String, String> pMap = new HashMap<>();
-		/*
-		 * Map<String, Object> pMap2 = new HashMap<String, Object>(); Map<String,
-		 * Object> pMap3 = new HashMap<String, Object>(); Map<String, Object> pMap4 =
-		 * new HashMap<String, Object>();
-		 */
+		
 		boolean ask=true;
 		while(ask) {
+				
 			String name=scn.nextLine();
 			String email=scn.nextLine();
 			String dept=scn.nextLine();
@@ -28,7 +25,8 @@ public class HashMap2 {
 			pMap.put("email",email);
 			pMap.put("dept",dept);
 			hmap.add(pMap);	
-		
+			pMap = null;
+			pMap = new HashMap<>();
 		Iterator<HashMap<String, String>> it=hmap.iterator();
 		while(it.hasNext()) {
 			HashMap<String, String> rMap=it.next();
@@ -36,8 +34,8 @@ public class HashMap2 {
 			System.out.println("name :"+ rMap.get("name"));
 			System.out.println("email :"+ rMap.get("email"));
 			System.out.println("dept :"+ rMap.get("dept"));
-
 			rMap=null;
+		
 			System.out.println("#### 반복 끝 ####");
 		}
 		
