@@ -1,11 +1,10 @@
+package db.conn;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import db.conn.DBconn;
 
 public class DBUserInfo {
 	public List<Map<String,String>> getUserInfo(){
