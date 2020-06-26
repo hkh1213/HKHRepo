@@ -1,4 +1,4 @@
-package NewPackage;
+package SelfStudty;
 
 import java.util.Arrays;
 import java.util.Collections;

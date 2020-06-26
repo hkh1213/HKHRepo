@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
  
-public class primenum {
+public class Setusing {
 	  public static List<Integer> getDistinctStream(List<Integer> originList) {
 		  
 	        List<Integer> resultList = new ArrayList<Integer>();
@@ -28,7 +28,7 @@ public class primenum {
         resultList = getDistinctStream(originList);
  
         System.out.println(resultList);
-/*        return answer;
-*/  
+		/* return answer; */
+ 
         }
 }

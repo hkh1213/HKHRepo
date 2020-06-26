@@ -19,7 +19,7 @@ public class BTOB {
 		Arrays.sort(arr);
 		ArrayList<String> stList = new ArrayList<>(Arrays.asList(strarr));
 
-		for(i=0;i<arr.length;i++) {
+		for(i=0;i<arr.length-1;i++) {
 		
 			if(arr[i]%div!=0) {
 					

@@ -1,4 +1,4 @@
-package NewPackage;
+package SelfStudty;
 
 import java.util.ArrayList;
 import java.util.List;
