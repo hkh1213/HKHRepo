@@ -41,7 +41,7 @@ public class Algorithm8 {
 		}
 	}
 	public static void main(String[] args) {
-		findMazePath(0,0);
+		System.out.println(findMazePath(3,6));
 
 	}
 
