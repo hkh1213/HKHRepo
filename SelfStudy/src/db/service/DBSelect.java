@@ -12,7 +12,7 @@ public class DBSelect {
 	public static void main(String[] args) throws SQLException{
 		Connection conn=DBconn.getDBConnection();
 		
-		PreparedStatement pstmt=null;
+		PreparedStatement pstmt=null; //오라클에 sql 쿼리를 전달하기위한 객체생성
 		
 		String sql="select count(1) as CNT from user_info";
 		

@@ -34,7 +34,7 @@ public class DBInsert {
 			
 			String user_id = pMap.get("user_id");
 			System.out.println("전달받은 user_id : " + user_id);
-			pstmt.setString(++idx,  user_id); // 첫번째 ?
+			pstmt.setString(++idx,  user_id); // 첫번째 ? .setstring(매개뱐수 , 이름)
 			
 			String user_nm = pMap.get("user_nm");
 			System.out.println("전달받은 user_nm : " + user_nm);
