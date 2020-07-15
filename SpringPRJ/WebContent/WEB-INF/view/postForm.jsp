@@ -5,10 +5,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>다이아몬드</title>
 </head>
 <body>
-<form action="/doPost.do" method="post">
+<form action="/EMP/EMPList.do" method="post">
 
 이름 : <input type="text" name="name" placeholder="이름"><br>
 <input type="submit">

@@ -33,11 +33,10 @@ public class PrcticeController {
 	 * 
 	 * return "/get"; }
 	 */	
-	@RequestMapping(value="postForm")
-	public String postForm() {
-		log.info("PostForm Start");
-		return "/postForm";
-	}
+	/*
+	 * @RequestMapping(value="postForm") public String postForm() {
+	 * log.info("PostForm Start"); return "/postForm"; }
+	 */
 	@RequestMapping(value="doPost",method=RequestMethod.POST)
 	public String doPost(HttpServletRequest request,ModelMap model)
 			throws Exception {
