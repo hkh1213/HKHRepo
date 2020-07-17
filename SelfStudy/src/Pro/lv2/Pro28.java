@@ -3,30 +3,34 @@ package Pro.lv2;
 import java.util.Arrays;
 
 public class Pro28 {
+	static int i = 0;
 	public static void main(String[] args) {
-		int[] scoville = { 10,11,2,7,1 }; // > {3,5,9,10,11} > {9,10,11,13}
-		int K =21;
-		solution(scoville, K);
+		int[] scoville = {1 ,3 ,5 ,8 ,9}; // > {3,5,9,10,11} > {9,10,11,13}
+		int K =72;
+		System.out.println(solution(scoville, K));
+
 	}
 
-	public static void solution(int[] scoville, int K) {
+	public static int solution(int[] scoville, int K) {
+		int b;
+		while(scoville[i]<K) {
 		Arrays.sort(scoville);
-		
-		int i = 0;
-		int ans[] = new int[scoville.length];
-		ans[0] = scoville[0] + (2 * scoville[1]);
-		while (K >= ans[i]) {
-			if (ans[i] >= scoville[i + 2])
-				ans[i + 1] = 2 * ans[i] + scoville[i + 2];
-			else
-				ans[i+1]=2*scoville[i+2]+ans[i];
-			
-			Arrays.sort(scoville);
-			System.out.println(Arrays.toString(ans));
-			System.out.println(Arrays.toString(scoville));
-			
-			i++;
-			System.out.println(i+1);
+		if(scoville[scoville.length-1]<K&&i==scoville.length-1)
+			return -1;
+		int a=scoville[i]+scoville[i+1]*2;
+		scoville[i]=0;scoville[i+1]=a;
+		i++;
+		for(int j=0;j<scoville.length;j++) {
+			for(int k=j+1;k<scoville.length-1;k++) {
+				if(scoville[k]>scoville[k+1]) {
+					b = scoville[k];
+					scoville[k] = scoville[k+1];
+					scoville[k+1] = b;
+				}
+			}
 		}
 	}
+		return i;
+	}
+	
 }
