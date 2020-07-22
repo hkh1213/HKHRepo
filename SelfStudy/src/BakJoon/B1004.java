@@ -18,18 +18,26 @@ public class B1004 {
 			int arr[][]=new int[k][3];
 
 			for(int j=0;j<k;j++) {
+				
 				for(int l=0;l<3;l++) {
+					
 					arr[j][l]=scn.nextInt();
-					if((st[0]-arr[j][0])*(st[0]-arr[j][0])+(st[1]-arr[j][1])*(st[1]-arr[j][1])<=arr[j][2]*arr[j][2]) {
+					int stgob=(st[0]-arr[j][0])*(st[0]-arr[j][0])+(st[1]-arr[j][1])*(st[1]-arr[j][1]);
+					int endgob=(end[0]-arr[j][0])*(end[0]-arr[j][0])+(end[1]-arr[j][1])*(end[1]-arr[j][1]);
+					int Lgob=arr[j][2]*arr[j][2];
+					
+					if(l%2==0) {
+					if(stgob<Lgob&&endgob>Lgob) {
 						count+=1;
 					}
-					if((end[0]-arr[j][0])*(end[0]-arr[j][0])+(end[1]-arr[j][1])*(end[1]-arr[j][1])<=arr[j][2]*arr[j][2]) {
+				    if(stgob>Lgob&&endgob<Lgob) {
 						count+=1;
 					}
-
+					}
+					//System.out.println("count :"+count);
 				}
 			}
-			System.out.println(count);
+			System.out.println("count :"+count);
 			count=0;
 			i++;
 		}
